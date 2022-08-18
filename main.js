@@ -1,19 +1,22 @@
-let search = document.getElementById("search").innerText = "hola"
+//
+
+let city= null
+let key = "ef84c9f176e654737a9cb10d2927de6c"
+let search;
 
 document.getElementById("btn").addEventListener('click',function(){
- 
+search= document.getElementById("search").value;
+console.log(search) 
+return
 })
+
+city = "santiago de chile"
 console.log(search)
 
 
-let city = "japon"
-let key = "ef84c9f176e654737a9cb10d2927de6c"
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`
 
-
-
 axios.get(url)
-
   .then(response => {
     this.users = response.data;
     let clima = response.data;
@@ -23,15 +26,10 @@ axios.get(url)
     let img = `<img src="http://openweathermap.org/img/wn/${icon}@2x.png">`
     document.getElementById("container").innerHTML = result
     document.getElementById("inner-skew").innerHTML = img
-console.log(users)
-    console.log(response.data)
+
    
-    
   })
   .catch(e => {
     // Podemos mostrar los errores en la consola
     console.log(e);
   })
-
-
-  // falta es buscador de ciudades
