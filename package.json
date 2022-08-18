@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "cities.json": "^1.1.12"
   }
 }
